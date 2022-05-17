@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class Pilota extends Thread {
-    public static int tempoPista = 1500;
     private String nome;
     private Spogliatoio spogliatoio;
     private Semaforo semaforoGara;
@@ -22,13 +21,15 @@ public class Pilota extends Thread {
         semaforoGara.occupa();
         System.out.println("-GARA: " + this.nome + " ha iniziato la gara!");
         long inizio = System.nanoTime();
-        try { Thread.sleep((long)(Math.random() * 1000)); } 
-        catch (InterruptedException e) { e.printStackTrace(); }
+        for (int i=0; i<15; i++) {
+            try { Thread.sleep((long)(Math.random() * 1000)); } 
+            catch (InterruptedException e) { e.printStackTrace(); } 
+        }
         long fine = System.nanoTime();
-        semaforoGara.libera();
 
         tempo = (fine - inizio)/1000000;
         System.out.println("-GARA: " + this.nome + " ha finito la gara, Tempo: " + this.tempo);
+        semaforoGara.libera();
         
         spogliatoio.usa(this);
 

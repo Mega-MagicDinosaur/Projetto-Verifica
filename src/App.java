@@ -36,10 +36,10 @@ public class App {
         
         
         // print classifica
-        System.out.println("\n");
+        System.out.print("\n");
         System.out.println("===== CLASSIFICA =====");
         for (Pilota p : Pilota.classifica) {
-            System.out.println(p.getNome());
+            System.out.println(p.getNome() + ": " + p.getTempo());
         }
 
         System.out.println("=====  FINE  =====");
