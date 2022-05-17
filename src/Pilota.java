@@ -17,7 +17,6 @@ public class Pilota extends Thread {
     public void run() {
         spogliatoio.usa(this);
 
-        // fai gara
         semaforoGara.occupa();
         System.out.println("-GARA: " + this.nome + " ha iniziato la gara!");
         long inizio = System.nanoTime();
