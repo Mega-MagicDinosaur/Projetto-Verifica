@@ -1,16 +1,18 @@
 public class App {
     public static void main(String[] args) throws Exception {
         Semaforo semaforo = new Semaforo(2);
+        Semaforo semaforoGara = new Semaforo(4);
+
         Spogliatoio spogliatoio = new Spogliatoio(semaforo);
 
-        Pilota p1 = new Pilota("Uno", spogliatoio);
-        Pilota p2 = new Pilota("Due", spogliatoio);
-        Pilota p3 = new Pilota("Tre", spogliatoio);
-        Pilota p4 = new Pilota("Quattro", spogliatoio);
-        Pilota p5 = new Pilota("Cinque", spogliatoio);
-        Pilota p6 = new Pilota("Sei", spogliatoio);
-        Pilota p7 = new Pilota("Sette", spogliatoio);
-        Pilota p8 = new Pilota("Otto", spogliatoio);
+        Pilota p1 = new Pilota("Uno", spogliatoio, semaforoGara);
+        Pilota p2 = new Pilota("Due", spogliatoio, semaforoGara);
+        Pilota p3 = new Pilota("Tre", spogliatoio, semaforoGara);
+        Pilota p4 = new Pilota("Quattro", spogliatoio, semaforoGara);
+        Pilota p5 = new Pilota("Cinque", spogliatoio, semaforoGara);
+        Pilota p6 = new Pilota("Sei", spogliatoio, semaforoGara);
+        Pilota p7 = new Pilota("Sette", spogliatoio, semaforoGara);
+        Pilota p8 = new Pilota("Otto", spogliatoio, semaforoGara);
 
         System.out.println("=====  INIZIO  =====");
 
