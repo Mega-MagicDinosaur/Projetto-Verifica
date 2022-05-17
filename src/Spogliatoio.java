@@ -9,7 +9,7 @@ public class Spogliatoio {
         semaforo.occupa();
         System.out.println("lo spogliatoio è usato da " + p.getNome());
 
-        try { Thread.sleep(1000); }
+        try { Thread.sleep((long)(Math.random() * 1000)); }
         catch (InterruptedException e) { e.printStackTrace(); }
 
         System.out.println(p.getNome() +  " è uscito dallo spogliatoio");
